@@ -170,9 +170,11 @@ class ListItem extends React.Component {
       selectedDateMarkType,
     } = this.props;
 
-    const hasSelected = startDate === currentDate || endDate === currentDate;
     const currentDate = `${item.year}-${item.month}-${day}`;
     const markTypeStyles = this._getMarkTypeStyles(currentDate, days);
+    const isSelected =
+      startDate == currentDate ||
+      (startDate <= currentDate && endDate >= currentDate);
 
     let dayStyle = {};
     if (listItemStyle.day && typeof listItemStyle.day === "object") {
