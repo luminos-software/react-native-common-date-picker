@@ -215,7 +215,7 @@ class ListItem extends React.Component {
                 listItemStyles.day,
                 dayStyle,
                 disabledDayStyle,
-                hasSelected && { ...listItemStyle.selectedDay },
+                isSelected && { ...listItemStyle.selectedDay },
               ]}
             >
               {day}
